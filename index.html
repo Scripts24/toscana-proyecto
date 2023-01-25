@@ -5,18 +5,134 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>La Toscana</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <!--Font-awesome-->
+    <script src="https://kit.fontawesome.com/cd2f965cc2.js" crossorigin="anonymous"></script>
+    <!-- Íconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Hoja de estilos -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-<header>
-    <h1 class="titulo-sitio">Toscana</h1>
-</header>
-
-
-    
+    <!-- Inicio header y nav -->
+    <header>
+        <nav>
+            <div class="titulo-logo">
+                <a href="#">
+                    <img src="./img/toscana.png" class="logo" id="top" alt="logo">
+                </a>
+                <h1 class="titulo-sitio">LA TOSCANA</h1>
+            </div>
+            <ul class="enlaces-menu">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./pages/carta.html">Carta</a></li>
+                <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+            <button class="ham" type="button">
+                <span class="br-1"></span>
+                <span class="br-2"></span>
+                <span class="br-3"></span>
+            </button>
+        </nav>
+    </header>
+    <!-- Fin header y nav -->
+    <!-- Inicio contenido principal -->
+    <main>
+        <!-- Hero section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Restó ~ Delivery</h2>
+                <p>Martes a domingos</p> <br>
+                <p>9 a 15 y 20 a 23:30 hs</p> <br>
+                <a href="./pages/carta.html">VER CARTA</a>
+            </div>
+        </section>
+        <!-- Fin Hero section -->
+        <!-- Inicio galería con efectos -->
+        <section class="galeria">
+            <div class="ful-img" id="ful-img-box">
+                <img src="imgs/1.jpg" id="ful-img" alt="">
+                <span onclick="close_img()"><i class="bi bi-x-circle"></i></span>
+            </div>
+            <div class="galeria-titulo">
+                <h2>DELICIAS DE ITALIA</h2>
+            </div>
+            <div class="img-galery">
+                <img src="./img/canelones.jpg" onclick="open_ful_img(this.src)" alt="">
+                <img src="./img/carbonara.jpg" onclick="open_ful_img(this.src)" alt="">
+                <img src="./img/lasana.jpg" onclick="open_ful_img(this.src)" alt="">
+                <img src="./img/ravioles.jpg" onclick="open_ful_img(this.src)" alt="">
+                <img src="./img/pizza2.jpg" onclick="open_ful_img(this.src)" alt="">
+                <img src="./img/pizza.jpg" onclick="open_ful_img(this.src)" alt="">
+                <img src="./img/pizza4.jpg" onclick="open_ful_img(this.src)" alt="">
+                <img src="./img/pizza5.jpg" onclick="open_ful_img(this.src)" alt="">
+                <img src="./img/cannoli.jpg" onclick="open_ful_img(this.src)" alt="">
+                <img src="./img/pannacota.jpg" onclick="open_ful_img(this.src)" alt="">
+                <img src="./img/tiramisu.jpg" onclick="open_ful_img(this.src)" alt="">
+                <img src="./img/tortas.jpg" onclick="open_ful_img(this.src)" alt="">
+            </div>
+        </section>
+        <!-- Fin galería con efectos -->
+    </main>
+    <!-- Fin contenido principal -->
+    <!-- Inicio Footer -->
+    <footer>
+        <div>
+            <ul>
+                <li>
+                    <a class="top" href="#top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <i class="fas fa-arrow-alt-circle-up icon" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="whatsapp"
+                        href="https://api.whatsapp.com/send?phone=542215657734&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20LaToscana"
+                        target="_blank">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <i class="fa-brands fa-whatsapp icon" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="instagram" href="https://www.instagram.com/" target="_blank">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="mail" href="mailto:latoscana_resto@gmail.com" target="_blank">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <i class="fa-regular fa-envelope icon" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p>29 e/ 493 y 494<br>
+            Gonnet - Buenos Aires - Argentina<br>
+            Todos los derechos reservados &copy;
+            <script> document.write(new Date().getFullYear());</script> - La Toscana
+        </p>
+        <img class="powered" src="./img/logocv.png" alt="logo desarrollo web">
+    </footer>
+    <!-- Fin footer -->
     <script src="./js/navbar.js"></script>
+    <script src="./js/galeria.js"></script>
 </body>
 
 </html>
