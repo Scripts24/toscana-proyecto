@@ -52,31 +52,35 @@
             </div>
         </section>
         <!-- Fin Hero section -->
-        <!-- Inicio galería con efectos -->
-        <section class="galeria">
-            <div class="ful-img" id="ful-img-box">
-                <img src="imgs/1.jpg" id="ful-img" alt="">
-                <span onclick="close_img()"><i class="bi bi-x-circle"></i></span>
+        <!-- Inicio galería Lightbox -->
+        <section>
+            <div id="contenedor-principal">
+                <div id="contenedor-interno">
+                    <img id="img-activa" src="./img/canelones.jpg"  alt="">
+                    <button id="btn-cierra"  type="button"><i class="bi bi-x-circle"></i></button>
+                    <button id="btn-retrocede" type="button">&lt;</button>
+                    <button id="btn-adelanta" type="button">&gt;</button>
+                </div>
             </div>
             <div class="galeria-titulo">
                 <h2>DELICIAS DE ITALIA</h2>
             </div>
-            <div class="img-galery">
-                <img src="./img/canelones.jpg" onclick="open_ful_img(this.src)" alt="">
-                <img src="./img/carbonara.jpg" onclick="open_ful_img(this.src)" alt="">
-                <img src="./img/lasana.jpg" onclick="open_ful_img(this.src)" alt="">
-                <img src="./img/ravioles.jpg" onclick="open_ful_img(this.src)" alt="">
-                <img src="./img/pizza2.jpg" onclick="open_ful_img(this.src)" alt="">
-                <img src="./img/pizza.jpg" onclick="open_ful_img(this.src)" alt="">
-                <img src="./img/pizza4.jpg" onclick="open_ful_img(this.src)" alt="">
-                <img src="./img/pizza5.jpg" onclick="open_ful_img(this.src)" alt="">
-                <img src="./img/cannoli.jpg" onclick="open_ful_img(this.src)" alt="">
-                <img src="./img/pannacota.jpg" onclick="open_ful_img(this.src)" alt="">
-                <img src="./img/tiramisu.jpg" onclick="open_ful_img(this.src)" alt="">
-                <img src="./img/tortas.jpg" onclick="open_ful_img(this.src)" alt="">
+            <div class="galeria" id="galeria">
+                <img src="./img/canelones.jpg" alt="">
+                <img src="./img/carbonara.jpg" alt="">
+                <img src="./img/lasana.jpg" alt="">
+                <img src="./img/ravioles.jpg" alt="">
+                <img src="./img/pizza2.jpg" alt="">
+                <img src="./img/pizza.jpg" alt="">
+                <img src="./img/pizza4.jpg" alt="">
+                <img src="./img/pizza5.jpg" alt="">
+                <img src="./img/cannoli.jpg" alt="">
+                <img src="./img/pannacota.jpg" alt="">
+                <img src="./img/tiramisu.jpg" alt="">
+                <img src="./img/tortas.jpg" alt="">
             </div>
         </section>
-        <!-- Fin galería con efectos -->
+        <!-- Fin galería Lightbox -->
     </main>
     <!-- Fin contenido principal -->
     <!-- Inicio Footer -->
