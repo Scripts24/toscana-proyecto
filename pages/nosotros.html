@@ -8,6 +8,8 @@
     <title>Nosotros</title>
     <!--Favicon-->
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <!--JQuery para activar Tilt Js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!--Font-awesome-->
     <script src="https://kit.fontawesome.com/cd2f965cc2.js" crossorigin="anonymous"></script>
     <!-- Íconos Bootstrap -->
@@ -42,6 +44,51 @@
     <!-- Fin header y nav -->
     <!-- Inicio contenido principal -->
     <main>
+        <!-- Inicio Cards 3D Tilt Js -->
+        <section>
+            <div class="nosotros">
+                <h1>SOBRE NOSOTROS</h1>
+            </div>
+            <div class="conteiner-card">
+                <div class="box" data-tilt>
+                    <div class="img-box">
+                        <img src="../img/scanmenu.jpg" alt="">
+                    </div>
+                    <div class="content-box">
+                        <h3>Nuestros servicios</h3>
+                        <p>Proponemos tres opciones para que disfruten de nuestro menú: en nuestro local o en las modalidades take away o delivery, todas ofrecidas con la misma calidez y la mejor atención.</p>
+                    </div>
+                </div>
+                <div class="box" data-tilt>
+                    <div class="img-box">
+                        <img src="../img/italian-food.jpg" alt="">
+                    </div>
+                    <div class="content-box">
+                        <h3>Nuestro menú</h3>
+                        <p>Nuestros platos se conciben con un equilibrio entre creatividad, técnica e intuición. El menú es variado, con propuestas diversas donde podrán encontrar la influencia gastronómica mediterránea y todo el sabor italiano.</p>
+                    </div>
+                </div>
+                <div class="box" data-tilt>
+                    <div class="img-box">
+                        <img src="../img/chef.jpg" alt="">
+                    </div>
+                    <div class="content-box">
+                        <h3>Nuestro equipo</h3>
+                        <p>Nuestra objetivo se basa en que La Toscana sea un solo equipo. Cocina, pastelería, salón, limpieza y administración todos con la  misma consigna, «Excelencia»</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fin Cards 3D Tilt Js -->
+        <section class="mapa">
+            <div>
+                <h2>UBICACIÓN</h2>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.4596501192023!2d-58.03297998504224!3d-34.89491278047006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2ddbfcf88a3f7%3A0xffe08187d00ba1c!2sC.%20493%20%26%20C.%2029%2C%20Gonnet%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1674966974695!5m2!1ses!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
 
     </main>
     <!-- Fin contenido principal -->
@@ -97,9 +144,9 @@
         <img class="powered" src="../img/logocv.png" alt="logo desarrollo web">
     </footer>
     <!-- Fin footer -->
-
-
     <script src="../js/navbar.js"></script>
+    <!-- Tilt Js -->
+    <script type="text/javascript" src="../js/tilt.jquery.js"></script>
 </body>
 
 </html>
