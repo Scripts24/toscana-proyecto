@@ -62,7 +62,7 @@ const productos = [
     },
     {
         id: "pasta-07",
-        titulo: "Parpadelle",
+        titulo: "Pappardelle",
         imagen: "../img/parpadelle.jpg",
         categoria: {
             nombre: "Pastas",
@@ -133,8 +133,8 @@ const productos = [
     },
     {
         id: "pizza-4",
-        titulo: "Pizza",
-        imagen: "../img/canelones.jpg",
+        titulo: "Marinara",
+        imagen: "../img/marinara.jpg",
         categoria: {
             nombre: "Pizzas",
             id: "pizzas"
@@ -143,8 +143,8 @@ const productos = [
     },
     {
         id: "pizza-5",
-        titulo: "Pizza",
-        imagen: "../img/canelones.jpg",
+        titulo: "Prosciutto",
+        imagen: "../img/prosciutto.jpg",
         categoria: {
             nombre: "Pizzas",
             id: "pizzas"
@@ -153,8 +153,8 @@ const productos = [
     },
     {
         id: "pizza-6",
-        titulo: "Pizza",
-        imagen: "../img/canelones.jpg",
+        titulo: "Capricciosa",
+        imagen: "../img/capricciosa.jpg",
         categoria: {
             nombre: "Pizzas",
             id: "pizzas"
@@ -163,8 +163,8 @@ const productos = [
     },
     {
         id: "pizza-7",
-        titulo: "Pizza",
-        imagen: "../img/canelones.jpg",
+        titulo: "Cuatro quesos",
+        imagen: "../img/quesos.jpg",
         categoria: {
             nombre: "Pizzas",
             id: "pizzas"
@@ -173,8 +173,8 @@ const productos = [
     },
     {
         id: "pizza-8",
-        titulo: "Pizza",
-        imagen: "../img/canelones.jpg",
+        titulo: "Cuatro estaciones",
+        imagen: "../img/estaciones.jpg",
         categoria: {
             nombre: "Pizzas",
             id: "pizzas"
@@ -183,8 +183,8 @@ const productos = [
     },
     {
         id: "pizza-9",
-        titulo: "Pizza",
-        imagen: "../img/canelones.jpg",
+        titulo: "Vegetariana",
+        imagen: "../img/vegetariana.jpg",
         categoria: {
             nombre: "Pizzas",
             id: "pizzas"
@@ -193,8 +193,8 @@ const productos = [
     },
     {
         id: "pizza-10",
-        titulo: "Pizza",
-        imagen: "../img/canelones.jpg",
+        titulo: "Diávola",
+        imagen: "../img/diavola.jpg",
         categoria: {
             nombre: "Pizzas",
             id: "pizzas"
@@ -204,8 +204,8 @@ const productos = [
     //Postres
     {
         id: "postre-1",
-        titulo: "Postre",
-        imagen: "../img/canelones.jpg",
+        titulo: "Torta genovesa",
+        imagen: "../img/genovesa.jpg",
         categoria: {
             nombre: "Postres",
             id: "postres"
@@ -214,8 +214,8 @@ const productos = [
     },
     {
         id: "postre-2",
-        titulo: "Postre",
-        imagen: "../img/canelones.jpg",
+        titulo: "Panna cota",
+        imagen: "../img/pannacota1.jpg",
         categoria: {
             nombre: "Postres",
             id: "postres"
@@ -224,8 +224,8 @@ const productos = [
     },
     {
         id: "postre-3",
-        titulo: "Postre",
-        imagen: "../img/canelones.jpg",
+        titulo: "Tiramisú",
+        imagen: "../img/tiramissu.jpg",
         categoria: {
             nombre: "Postres",
             id: "postres"
@@ -234,8 +234,8 @@ const productos = [
     },
     {
         id: "postre-4",
-        titulo: "Postre",
-        imagen: "../img/canelones.jpg",
+        titulo: "Torta caprese",
+        imagen: "../img/caprese.jpg",
         categoria: {
             nombre: "Postres",
             id: "postres"
@@ -244,8 +244,8 @@ const productos = [
     },
     {
         id: "postre-5",
-        titulo: "Postre",
-        imagen: "../img/canelones.jpg",
+        titulo: "Crostata",
+        imagen: "../img/crostata.jpg",
         categoria: {
             nombre: "Postres",
             id: "postres"
@@ -254,8 +254,8 @@ const productos = [
     },
     {
         id: "postre-6",
-        titulo: "Postre",
-        imagen: "../img/canelones.jpg",
+        titulo: "Pastiera",
+        imagen: "../img/pastiera.jpg",
         categoria: {
             nombre: "Postres",
             id: "postres"
@@ -264,8 +264,8 @@ const productos = [
     },
     {
         id: "postre-7",
-        titulo: "Postre",
-        imagen: "../img/canelones.jpg",
+        titulo: "Cannoli",
+        imagen: "../img/cannoli1.jpg",
         categoria: {
             nombre: "Postres",
             id: "postres"
@@ -274,8 +274,8 @@ const productos = [
     },
     {
         id: "postre-8",
-        titulo: "Postre",
-        imagen: "../img/canelones.jpg",
+        titulo: "Cassata",
+        imagen: "../img/cassata.jpg",
         categoria: {
             nombre: "Postres",
             id: "postres"
@@ -284,8 +284,8 @@ const productos = [
     },
     {
         id: "postre-9",
-        titulo: "Postre",
-        imagen: "../img/canelones.jpg",
+        titulo: "Pardulas",
+        imagen: "../img/pardulas.jpg",
         categoria: {
             nombre: "Postres",
             id: "postres"
@@ -294,8 +294,8 @@ const productos = [
     },
     {
         id: "postre-10",
-        titulo: "Postre",
-        imagen: "../img/canelones.jpg",
+        titulo: "Bonèt",
+        imagen: "../img/bonet.jpg",
         categoria: {
             nombre: "Postres",
             id: "postres"

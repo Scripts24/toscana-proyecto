@@ -131,6 +131,12 @@ nav {
     margin-right: 20px;
 }
 
+.boton-carrito{
+    font-size  : 30px;
+    color      : #ffde59e0;
+    padding-left: 8px;
+}
+
 /* INDEX */
 
 /*-- Hero clip-path --*/
@@ -339,17 +345,17 @@ nav {
     position       : relative;
     overflow       : hidden;
     background     : rgba(217, 217, 217, 0.58);
-    border         : 1px solid white;
+    border         : 1px solid #000;
     box-shadow     : 12px 17px 51px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(6px);
     border-radius  : 15px;
 }
 
 .box-container .producto img {
-    height    : 230px;
-    width     : 100%;
-    object-fit: cover;
-    transition: all 2s ease;
+    height       : 230px;
+    width        : 100%;
+    object-fit   : cover;
+    border-bottom: 1px solid #000;
 }
 
 .box-container .producto .producto-titulo {
@@ -388,10 +394,6 @@ nav {
 .box-container .producto .producto-agregar:active {
     transform: scale(0.95) rotateZ(1.7deg);
 }
-
-
-
-
 
 
 /*---NOSOTROS---*/
@@ -965,6 +967,16 @@ footer .powered {
 }
 
 @media screen and (max-width:600px) {
+
+    .carta h2{
+        font-size: 30px;
+    }
+
+    .boton-categoria {
+        padding: 5px;
+        font-size: 16px;
+    }
+
     .container .contact-form {
         padding: 25px;
     }
