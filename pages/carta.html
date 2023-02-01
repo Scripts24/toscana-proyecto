@@ -8,6 +8,8 @@
     <title>Carta</title>
     <!--Favicon-->
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <!--Subir Jquery-->
+    <script src=" http://code.jquery.com/jquery-latest.js"></script>
     <!--Font-awesome-->
     <script src="https://kit.fontawesome.com/cd2f965cc2.js" crossorigin="anonymous"></script>
     <!-- Íconos Bootstrap -->
@@ -21,12 +23,14 @@
     <div class="progreso">
         <div class="barra" id="barra"></div>
     </div>
+    <!-- Botón fixed subir Js -->
+    <div class="ir-arriba"><i class="bi bi-arrow-bar-up"></i></div>
     <!-- Inicio header y nav -->
     <header>
         <nav>
             <div class="titulo-logo">
                 <a href="../index.html">
-                    <img src="../img/toscana.png" class="logo" id="top" alt="logo">
+                    <img src="../img/volterra.png" class="logo" id="top" alt="logo">
                 </a>
                 <h1 class="titulo-sitio">VOLTERRA</h1>
             </div>
@@ -46,8 +50,30 @@
     <!-- Fin header y nav -->
     <!-- Inicio contenido principal -->
     <main>
-
-
+        <!-- Inicio carta -->
+        <section class="carta">
+            <div>
+                <h2> CARTA </h2>
+            </div>
+            <ul>
+                <li>
+                    <button class="boton-categoria" id="todo">VER TODO</button>
+                </li>
+                <li>
+                    <button class="boton-categoria" id="pastas">PASTAS</button>
+                </li>
+                <li>
+                    <button class="boton-categoria" id="pizzas">PIZZAS</button>
+                </li>
+                <li>
+                    <button class="boton-categoria" id="postres">POSTRES</button>
+                </li>
+            </ul>
+            <div class="box-container" id="contenedor-productos">
+                <!-- Se rellena con Js-->
+            </div>
+        </section>
+        <!-- Fin carta-->
     </main>
     <!-- Fin contenido principal -->
     <!-- Inicio Footer -->
@@ -102,9 +128,10 @@
         <img class="powered" src="../img/logocv1.png" alt="logo desarrollo web">
     </footer>
     <!-- Fin footer -->
-
     <script src="../js/scroll.js"></script>
     <script src="../js/navbar.js"></script>
+    <script src="../js/upload.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

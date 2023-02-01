@@ -40,6 +40,20 @@ p {
     width     : 0%;
 }
 
+/* BOTÓN SUBIR JS */
+.ir-arriba {
+    display         : none;
+    padding         : 5px;
+    background-color: #000;
+    color           : #ffde59e0;
+    font-size       : 30px;
+    cursor          : pointer;
+    position        : fixed;
+    bottom          : 20px;
+    right           : 20px;
+    z-index         : 1;
+    border-radius   : 10px;
+}
 
 /* HEADER */
 header {
@@ -263,7 +277,125 @@ nav {
     font-size: 40px;
 }
 
+/*---CARTA---*/
+.carta>div {
+    width          : 100%;
+    display        : flex;
+    justify-content: center;
+}
+
+.carta h2 {
+    margin       : 30px 0;
+    padding      : 10px;
+    text-align   : center;
+    font-size    : 40px;
+    border-radius: 20px;
+    background   : #fdfcfc;
+    box-shadow   : 5px -5px 10px #d7d6d6,
+        -5px 5px 10px #ffffff;
+}
+
+.carta ul {
+    display        : flex;
+    justify-content: center;
+    gap            : 10px;
+}
+
+.boton-categoria {
+    background     : rgba(217, 217, 217, 0.58);
+    border         : 1px solid white;
+    box-shadow     : 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius  : 15px;
+    cursor         : pointer;
+    transition     : all 0.5s;
+    color          : #000;
+    font-size      : 24px;
+    font-family    : 'Mulish', sans-serif;
+    padding        : 10px;
+    margin-bottom  : 20px;
+}
+
+.boton-categoria:hover {
+    border   : 2px solid #000;
+    transform: scale(1);
+}
+
+.box-container {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-around;
+    gap            : 20PX;
+    margin-top     : 30px;
+    padding-bottom : 40px;
+}
+
+.box-container .producto {
+    width          : 300px;
+    height         : 400px;
+    border         : 3px solid #172601;
+    border-radius  : 5px;
+    text-align     : center;
+    position       : relative;
+    overflow       : hidden;
+    background     : rgba(217, 217, 217, 0.58);
+    border         : 1px solid white;
+    box-shadow     : 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius  : 15px;
+}
+
+.box-container .producto img {
+    height    : 230px;
+    width     : 100%;
+    object-fit: cover;
+    transition: all 2s ease;
+}
+
+.box-container .producto .producto-titulo {
+    color    : #000;
+    font-size: 35px;
+}
+
+
+.box-container .producto .producto-precio {
+    font-weight   : bold;
+    color         : #000;
+    font-size     : 24px;
+    padding-bottom: 5px;
+}
+
+.box-container .producto .producto-agregar {
+    background     : rgba(217, 217, 217, 0.58);
+    border         : 1px solid white;
+    box-shadow     : 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius  : 15px;
+    cursor         : pointer;
+    transition     : all 0.5s;
+    color          : #000;
+    font-size      : 24px;
+    font-family    : 'Mulish', sans-serif;
+    font-style     : italic;
+    padding        : 10px;
+}
+
+.box-container .producto .producto-agregar:hover {
+    border   : 2px solid #000;
+    transform: scale(1.05);
+}
+
+.box-container .producto .producto-agregar:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
+
+
+
+
+
 /*---NOSOTROS---*/
+
 /* Cards 3D Tilt Js */
 .nosotros {
     width          : 100%;
@@ -271,7 +403,7 @@ nav {
     justify-content: center;
 }
 
-.nosotros h1 {
+.nosotros h2 {
     margin-top   : 30px;
     padding      : 10px;
     text-align   : center;
@@ -484,7 +616,7 @@ nav {
     color        : #404040;
     border       : none;
     outline      : none;
-    border-bottom: 2px solid #095a55;
+    border-bottom: 2px solid #595959;
 }
 
 .container .contact-form .form-box .input-box textarea {
@@ -876,6 +1008,5 @@ footer .powered {
     .conteiner-card .box .content-box p {
         font-size: 16px;
     }
-
 
 }
