@@ -31,12 +31,13 @@
                 <h1 class="titulo-sitio">VOLTERRA</h1>
             </div>
             <ul class="enlaces-menu">
+                
                 <li>
                     <a href="./pages/carta.html" class=" boton-volver"><i class="bi bi-arrow-90deg-left"></i>Seguir
                         comprando</a>
                 </li>
                 <li>
-                    <a href="./carrito.html" class=" boton-carrito active"><i class="bi bi-cart"></i>Carrito</a>
+                    <a href="./carrito.html" class=" boton-carrito "><i class="bi bi-cart"></i> Ver Carrito</a>
                 </li>
             </ul>
             <button class="ham" type="button">
@@ -49,29 +50,29 @@
     <!-- Fin header y nav -->
     <!-- Inicio contenido principal -->
     <main class="container-carrito">
-        <h2 class="titulo-principal">CARRITO</h2>
-        <div class="contenedor-carrito">
-            <p class="carrito-vacio" id="carrito-vacio">Tu carrito está vacío <i class="bi bi-emoji-frown-fill"></i>
-            </p>
-            <div class="carrito-productos disabled" id="carrito-productos">
-                <!--Se rellena con js-->
+        <h2>FINALIZAR COMPRA</h2>
+        <div class="contenedor-form">
+            <form class="contact-form">
+                <input name="name" type="text" placeholder="Nombre y apellido"
+                    title="El nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                    required />
+                <input type="email" name="email" placeholder="Escribe tu email" title="Email incorrecto"
+                    pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                    <div><br><br>
+                        <input type="Radio" name="typeBuy" value="Efectivo/Transferencia" checked>
+                        Efectivo/Transferencia
+                        <input type="Radio" name="typeBuy" value="En cuotas"> En cuotas
+                        <input type="Radio" name="typeBuy" value="Debito"> Débito
+                      </div> <br>
+                    <input type="submit" value="Comprar" />
+                <input type="reset" value="Reset" />
+            </form>
+            <div class="contact-form-loader none">
+                <img src="../img/loader.svg" alt="Cargando">
             </div>
-
-            <div class="carrito-acciones disabled" id="carrito-acciones">
-                <div class="carrito-acciones-izquierda">
-                    <button class="carrito-acciones-vaciar" id="carrito-acciones-vaciar">Vaciar carrito</button>
-                </div>
-                <div class="carrito-acciones-derecha">
-                    <div class="carrito-acciones-total">
-                        <p>Total:</p>
-                        <p id="total">$3000</p>
-                    </div>
-                    <a href="./compra.html"class="carrito-acciones-comprar"> Comprar</a>   
-                </div>
+            <div class="contact-form-response none">
+                <p>COMPRA EXITOSA</p>
             </div>
-
-            <p class="carrito-comprado disabled" id="carrito-comprado">Muchas gracias por tu compra <i
-                    class="bi bi-emoji-smile-fill"></i></p>
         </div>
     </main>
     <footer>
@@ -129,7 +130,6 @@
         <img class="powered" src="./img/logocv1.png" alt="logo desarrollo web" />
     </footer>
     <!-- Fin footer -->
-    <script src="./js/carrito.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/navbar.js"></script>
 </body>
