@@ -1,18 +1,21 @@
-$(document).ready(function(){
-    
-    $('.ir-arriba').click(function(){
-        $('body, html').animate({
-            scrollTop: '0px'
-        }, 500);
+let calcScrollValue = () => {
+    let scrollProgress = document.getElementById("top-progress");
+    let progressValue = document.getElementById("progress-value");
+    let pos = document.documentElement.scrollTop;
+    let calcHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100) / calcHeight);
+    if (pos > 100) {
+        scrollProgress.style.display = "grid";
+    } else {
+        scrollProgress.style.display = "none";
+    }
+    scrollProgress.addEventListener("click", () => {
+        document.documentElement.scrollTop = 0;
     });
+    scrollProgress.style.background = `conic-gradient(#8C8C8C ${scrollValue}%, #0D0D0D ${scrollValue}%)`;
+};
 
-    $(window).scroll(function(){
-        if( $(this).scrollTop() > 0){
-            $('.ir-arriba').slideDown(500);
-        }else{
-            $('.ir-arriba').slideUp(500);
-        }
-    });
-
-});
-
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
