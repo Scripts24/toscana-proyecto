@@ -83,6 +83,20 @@ function actualizar_botones_eliminar() {
 }
 
 function eliminar_del_carrito(e) {
+    Toastify({
+        text: "Producto eliminado 🚫",
+        duration: 3000,
+        gravity: "top",
+        position: "center",
+        style: {
+            background: "#ffde59e0",
+            color: "black",
+            marginTop: "70px",
+            padding: "20px",
+            fontSize: "25px",
+            borderRadius: "8px"
+        },
+    }).showToast();
     const id_boton = e.currentTarget.id;
     const index = productos_en_carrito.findIndex(producto => producto.id === id_boton);
 
@@ -97,11 +111,49 @@ function eliminar_del_carrito(e) {
 boton_vaciar.addEventListener("click", vaciar_carrito);
 
 function vaciar_carrito() {
-
-    productos_en_carrito.length = 0;
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productos_en_carrito));
-    cargar_productos_carrito();
-
+    Swal.fire({
+        title: 'Estás seguro? ',
+        html: `Se van a borrar ${productos_en_carrito.reduce((acc, producto) => acc + producto.cantidad, 0)} productos ❗❗`,
+        showCancelButton: true,
+        confirmButtonText: 'Si',
+        cancelButtonText: `No`,
+        confirmButtonColor: "green",
+        cancelButtonColor: "red",
+        width: 400,
+        heightAuto: false,
+        color: 'red',
+        background: 'black',
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            productos_en_carrito.length = 0;
+            localStorage.setItem("productos-en-carrito", JSON.stringify(productos_en_carrito));
+            cargar_productos_carrito();
+           
+            let timerInterval
+            Swal.fire({
+                title: 'Vaciando carrito',
+                timer: 4000,
+                timerProgressBar: true,
+                background: 'black',
+                didOpen: () => {
+                    Swal.showLoading()
+                    const b = Swal.getHtmlContainer().querySelector('b')
+                    timerInterval = setInterval(() => {
+                        b.textContent = Swal.getTimerLeft()
+                    }, 100)
+                },
+                willClose: () => {
+                    clearInterval(timerInterval)
+                }
+            }).then((result) => {
+                /* Read more about handling dismissals below */
+                if (result.dismiss === Swal.DismissReason.timer) {
+                    console.log('I was closed by the timer')
+                }
+            })
+        }
+    })
 }
 
 
