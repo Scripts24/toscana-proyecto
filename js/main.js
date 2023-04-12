@@ -14,8 +14,6 @@ let botones_agregar = document.querySelectorAll(".producto-agregar");
 const numerito = document.querySelector("#numerito");
 
 
-
-
 /*---Función para inyectar productos en el HTML--- */
 /*---Parámetro para que carguen solo los productos de la categoría elegida--- */
 function cargar_productos(productos_elegidos) {
@@ -63,7 +61,6 @@ botones_categorias.forEach(boton => {
             titulo_principal.innerText = "Todos los productos";
             cargar_productos(productos);
         }
-
     })
 });
 

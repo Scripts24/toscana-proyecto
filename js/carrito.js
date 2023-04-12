@@ -11,8 +11,13 @@ const contenedor_carrito_comprado = document.querySelector("#carrito-comprado");
 let botones_eliminar = document.querySelectorAll(".carrito-producto-eliminar");
 const boton_vaciar = document.querySelector("#carrito-acciones-vaciar");
 const contenedor_total = document.querySelector("#total");
-//const boton_comprar = document.querySelector("#carrito-acciones-comprar");
+const boton_comprar = document.querySelector("#carrito-acciones-comprar");
+const formulario = document.querySelector(".contact-form")
 
+
+if (productos_en_carrito.length === 0){
+    formulario.classList.add("disabled")
+}
 
 
 /*---Esta función se ejecuta cada vez que se carga la página y cada vez que se elimina un producto---*/
@@ -129,7 +134,7 @@ function vaciar_carrito() {
             productos_en_carrito.length = 0;
             localStorage.setItem("productos-en-carrito", JSON.stringify(productos_en_carrito));
             cargar_productos_carrito();
-           
+        
             let timerInterval
             Swal.fire({
                 title: 'Vaciando carrito',
@@ -160,13 +165,12 @@ function vaciar_carrito() {
 function actualizar_total() {
     const total_calculado = productos_en_carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
     total.innerText = `$${total_calculado}`;
-
 }
 
 
 boton_comprar.addEventListener("click", comprar_carrito);
 function comprar_carrito() {
-
+    
     productos_en_carrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productos_en_carrito));
 

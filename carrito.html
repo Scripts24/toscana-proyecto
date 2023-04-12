@@ -20,8 +20,8 @@
 
 <body>
     <!-- Progreso scroll -->
-    <div class="progreso">
-        <div class="barra" id="barra"></div>
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
     </div>
     <!-- Inicio header y nav -->
     <header>
@@ -53,12 +53,13 @@
     <main class="container-carrito">
         <h2 class="titulo-principal">CARRITO</h2>
         <div class="contenedor-carrito">
-            <p class="carrito-vacio" id="carrito-vacio">Deseas ver algo para comer? <a href="./pages/carta.html" class=" boton-volver">Ver Carta</a> 
+            <p class="carrito-vacio" id="carrito-vacio">Deseas ver algo para comer? <a href="./pages/carta.html"
+                    class=" boton-volver">Ver Carta</a>
             </p>
             <div class="carrito-productos disabled" id="carrito-productos">
                 <!--Se rellena con js-->
             </div>
-            <div class="carrito-acciones disabled" id="carrito-acciones">
+            <div class="carrito-acciones " id="carrito-acciones">
                 <div class="carrito-acciones-izquierda">
                     <button class="carrito-acciones-vaciar" id="carrito-acciones-vaciar">Vaciar carrito</button>
                 </div>
@@ -67,10 +68,27 @@
                         <p>Total:</p>
                         <p id="total">$3000</p>
                     </div>
-                    <a href="./compra.html" class="carrito-acciones-comprar"> Comprar</a>
                 </div>
             </div>
-            <p class="carrito-comprado disabled" id="carrito-comprado">Muchas gracias por tu compra <i
+                <div class="contenedor-form">
+                    <form class="contact-form ">
+                        <input name="name" type="text" placeholder="Nombre y apellido"
+                            title="El nombre solo acepta letras y espacios en blanco"
+                            pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required />
+                        <input type="email" name="email" placeholder="Escribe tu email" title="Email incorrecto"
+                            pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required />
+                        <div class="radio">
+                            <input type="Radio" name="typeBuy" value="Efectivo/Transferencia" checked />
+                            Efectivo/Transferencia
+                            <input type="Radio" name="typeBuy" value="En cuotas" /> En cuotas
+                            <input type="Radio" name="typeBuy" value="Debito" /> Débito
+                        </div>
+                        <br />
+                        <button class="carrito-acciones-comprar" id="carrito-acciones-comprar">Comprar ahora</button>
+                        <button type="reset" value="Reset" >RESET</button>
+                    </form>
+                </div>
+                <p class="carrito-comprado disabled" id="carrito-comprado">Muchas gracias por tu compra <i
                     class="bi bi-emoji-smile-fill"></i></p>
         </div>
     </main>
@@ -134,6 +152,7 @@
     <script src="./js/carrito.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/navbar.js"></script>
+    <script src="./js/formCompra.js"></script>
 </body>
 
 </html>

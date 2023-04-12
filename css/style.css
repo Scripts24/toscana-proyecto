@@ -10,7 +10,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 body h1,
 h2,
@@ -27,61 +27,48 @@ p {
 
 /* PROGRESO SCROLL */
 
-.progreso {
-    position  : fixed;
-    top       : 0;
-    z-index   : 10;
-    width     : 100%;
-    height    : 8px;
-    background: black;
+.progress-bar {
+    position: fixed;
+    width   : 100%;
+    height  : 8px;
+    top     : 0;
+    z-index : 10;
 }
 
-.barra {
-    background: #997619;
-    height    : 8px;
-    width     : 0%;
+.progress {
+    width           : 0%;
+    height          : 100%;
+    background-color: #997619;
 }
+
 
 /* BOTÓN SUBIR JS */
 
-/*.top-progress {
-    display         : none;
-    padding         : 5px;
-    background-color: #000;
-    color           : #ffde59e0;
-    font-size       : 30px;
-    cursor          : pointer;
-    position        : fixed;
-    bottom          : 20px;
-    right           : 20px;
-    z-index         : 1;
-    border-radius   : 10px;
-}*/
-
 #top-progress {
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-    height: 70px;
-    width: 70px;
-    display: none;
-    place-items: center;
+    position     : fixed;
+    bottom       : 20px;
+    right        : 10px;
+    height       : 70px;
+    width        : 70px;
+    display      : none;
+    place-items  : center;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-  }
+    box-shadow   : 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor       : pointer;
+    z-index      : 1;
+}
 
-  #progress-value  {
-    display: block;
-    height: calc(100% - 15px);
-    width: calc(100% - 15px);
+#progress-value {
+    display         : block;
+    height          : calc(100% - 15px);
+    width           : calc(100% - 15px);
     background-color: #ffde59e0;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-size: 35px;
-    color: black;
-  }
+    border-radius   : 50%;
+    display         : grid;
+    place-items     : center;
+    font-size       : 35px;
+    color           : black;
+}
 
 /* HEADER */
 
@@ -160,9 +147,9 @@ nav {
     margin-right: 20px;
 }
 
-.boton-carrito{
-    font-size  : 30px;
-    color      : #ffde59e0;
+.boton-carrito {
+    font-size   : 30px;
+    color       : #ffde59e0;
     padding-left: 8px;
 }
 
@@ -695,12 +682,13 @@ nav {
 }
 
 /*---CARRITO---*/
-.titulo-principal{
+
+.titulo-principal {
     text-align: center;
-    margin: 30px 0;
+    margin    : 30px 0;
 }
 
-.container-carrito{
+.container-carrito {
     min-height: 100vh;
 }
 
@@ -742,7 +730,7 @@ nav {
 }
 
 .carrito-producto-eliminar {
-    font-size: 20px;
+    font-size       : 20px;
     border          : 0;
     background-color: transparent;
     color           : rgb(243, 18, 18);
@@ -791,10 +779,166 @@ nav {
     cursor                    : pointer;
 }
 
-
 .disabled {
     display: none;
 }
+
+/*---COMPRA---*/
+
+
+.contact-form {
+    --form-ok-color   : #365902;
+    --form-error-color: #f44336;
+    margin-left       : auto;
+    margin-right      : auto;
+    width             : 80%;
+}
+
+.contact-form>* {
+    padding      : 16px;
+    margin       : 1rem auto;
+    display      : block;
+    width        : 100%;
+    background   : #ffde59e0;
+    border-radius: 10px;
+}
+
+.radio{
+    border       : 1px solid black;
+}
+
+.contact-form-loader img {
+    width : 60px;
+    height: 60px;
+}
+
+.contact-form-response {
+    font-family: 'Mulish', sans-serif;
+    font-size  : 24px;
+    font-weight: bold;
+    text-align : center;
+    color      : #FFFFFF;
+}
+
+.contact-form input {
+    font-size  : 16px;
+    font-family: 'Mulish', sans-serif;
+    color      : black;
+}
+
+.contact-form input[type="submit"],
+[type="reset"] {
+    width      : 50%;
+    font-weight: bold;
+    font-family: 'Mulish', sans-serif;
+    color      : black;
+    cursor     : pointer;
+}
+
+[type="submit"]:hover,
+[type="reset"]:hover {
+    background: #ebe991;
+}
+
+.contact-form *::placeholder {
+    color: black;
+}
+
+.contact-form [required]:valid {
+    border: solid var(--form-ok-color);
+}
+
+.contact-form [required]:invalid {
+    border: thin solid;
+}
+
+.contact-form-error {
+    margin-top      : -16px;
+    font-size       : 80%;
+    background-color: var(--form-error-color);
+    color           : #FFFFFF;
+    transition      : all 800ms ease;
+    text-align      : center;
+}
+
+.contact-form-error.is-active {
+    display  : block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.contact-form-loader {
+    text-align: center;
+}
+
+.loading {
+    --speed-of-animation: 0.9s;
+    --gap: 6px;
+    --first-color: #4c86f9;
+    --second-color: #49a84c;
+    --third-color: #f6bb02;
+    --fourth-color: #f6bb02;
+    --fifth-color: #2196f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    gap: 6px;
+    height: 100px;
+   }
+   
+   .loading span {
+    width: 4px;
+    height: 50px;
+    background: var(--first-color);
+    animation: scale var(--speed-of-animation) ease-in-out infinite;
+   }
+   
+   .loading span:nth-child(2) {
+    background: var(--second-color);
+    animation-delay: -0.8s;
+   }
+   
+   .loading span:nth-child(3) {
+    background: var(--third-color);
+    animation-delay: -0.7s;
+   }
+   
+   .loading span:nth-child(4) {
+    background: var(--fourth-color);
+    animation-delay: -0.6s;
+   }
+   
+   .loading span:nth-child(5) {
+    background: var(--fifth-color);
+    animation-delay: -0.5s;
+   }
+   
+   @keyframes scale {
+    0%, 40%, 100% {
+     transform: scaleY(0.05);
+    }
+   
+    20% {
+     transform: scaleY(1);
+    }
+   }
+
+.none {
+    display: none;
+}
+
+@keyframes show-message {
+    0% {
+        visibility: hidden;
+        opacity   : 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity   : 1;
+    }
+}
+
 
 /*---FOOTER---*/
 
@@ -1100,12 +1244,12 @@ footer .powered {
 
 @media screen and (max-width:600px) {
 
-    .carta h2{
+    .carta h2 {
         font-size: 30px;
     }
 
     .boton-categoria {
-        padding: 5px;
+        padding  : 5px;
         font-size: 16px;
     }
 

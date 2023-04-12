@@ -1,9 +1,10 @@
 
-window.onscroll = progress_scroll;
+window.addEventListener('load', ()=>{
+    const progress = document.getElementById('progress')
+    requestAnimationFrame(update)
+})
 
-function progress_scroll (){
-    let scroll = document.body.scrollTop || document.documentElement.scrollTop;
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrolled = (scroll/height) * 100;
-    document.getElementById('barra').style.width = scrolled + '%';
+function update(){
+    progress.style.width = `${((window.scrollY) / (document.body.scrollHeight - window.innerHeight) *100)}%`;
+    requestAnimationFrame(update)
 }
