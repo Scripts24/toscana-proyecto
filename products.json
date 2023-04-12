@@ -8,7 +8,7 @@
             "nombre": "Pastas",
             "id": "pastas"
         },
-        "precio": 1000
+        "precio": 500
     },
     {
         "id": "pasta-2",
@@ -18,7 +18,7 @@
             "nombre": "Pastas",
             "id": "pastas"
         },
-        "precio": 1000
+        "precio": 500
     },
     {
         "id": "pasta-3",
@@ -28,7 +28,7 @@
             "nombre": "Pastas",
             "id": "pastas"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "pasta-4",
@@ -38,7 +38,7 @@
             "nombre": "Pastas",
             "id": "pastas"
         },
-        "precio": 1000
+        "precio": 550
     },
     {
         "id": "pasta-5",
@@ -48,7 +48,7 @@
             "nombre": "Pastas",
             "id": "pastas"
         },
-        "precio": 1000
+        "precio": 500
     },
     {
         "id": "pasta-6",
@@ -58,7 +58,7 @@
             "nombre": "Pastas",
             "id": "pastas"
         },
-        "precio": 1000
+        "precio": 580
     },
     {
         "id": "pasta-7",
@@ -68,7 +68,7 @@
             "nombre": "Pastas",
             "id": "pastas"
         },
-        "precio": 1000
+        "precio": 520
     },
     {
         "id": "pasta-8",
@@ -78,7 +78,7 @@
             "nombre": "Pastas",
             "id": "pastas"
         },
-        "precio": 1000
+        "precio": 450
     },
     {
         "id": "pasta-9",
@@ -88,7 +88,7 @@
             "nombre": "Pastas",
             "id": "pastas"
         },
-        "precio": 1000
+        "precio": 480
     },
     {
         "id": "pasta-10",
@@ -98,7 +98,7 @@
             "nombre": "Pastas",
             "id": "pastas"
         },
-        "precio": 1000
+        "precio": 450
     },
     
     {
@@ -109,7 +109,7 @@
             "nombre": "Pizzas",
             "id": "pizzas"
         },
-        "precio": 1000
+        "precio": 1200
     },
     {
         "id": "pizza-2",
@@ -119,7 +119,7 @@
             "nombre": "Pizzas",
             "id": "pizzas"
         },
-        "precio": 1000
+        "precio": 1300
     },
     {
         "id": "pizza-3",
@@ -129,7 +129,7 @@
             "nombre": "Pizzas",
             "id": "pizzas"
         },
-        "precio": 1000
+        "precio": 1150
     },
     {
         "id": "pizza-4",
@@ -139,7 +139,7 @@
             "nombre": "Pizzas",
             "id": "pizzas"
         },
-        "precio": 1000
+        "precio": 1200
     },
     {
         "id": "pizza-5",
@@ -149,7 +149,7 @@
             "nombre": "Pizzas",
             "id": "pizzas"
         },
-        "precio": 1000
+        "precio": 1400
     },
     {
         "id": "pizza-6",
@@ -159,7 +159,7 @@
             "nombre": "Pizzas",
             "id": "pizzas"
         },
-        "precio": 1000
+        "precio": 1450
     },
     {
         "id": "pizza-7",
@@ -169,7 +169,7 @@
             "nombre": "Pizzas",
             "id": "pizzas"
         },
-        "precio": 1000
+        "precio": 1500
     },
     {
         "id": "pizza-8",
@@ -179,7 +179,7 @@
             "nombre": "Pizzas",
             "id": "pizzas"
         },
-        "precio": 1000
+        "precio": 1500
     },
     {
         "id": "pizza-9",
@@ -189,7 +189,7 @@
             "nombre": "Pizzas",
             "id": "pizzas"
         },
-        "precio": 1000
+        "precio": 1400
     },
     {
         "id": "pizza-10",
@@ -199,7 +199,7 @@
             "nombre": "Pizzas",
             "id": "pizzas"
         },
-        "precio": 1000
+        "precio": 1450
     },
     
     {
@@ -210,7 +210,7 @@
             "nombre": "Postres",
             "id": "postres"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "postre-2",
@@ -220,7 +220,7 @@
             "nombre": "Postres",
             "id": "postres"
         },
-        "precio": 1000
+        "precio": 400
     },
     {
         "id": "postre-3",
@@ -230,7 +230,7 @@
             "nombre": "Postres",
             "id": "postres"
         },
-        "precio": 1000
+        "precio": 900
     },
     {
         "id": "postre-4",
@@ -250,7 +250,7 @@
             "nombre": "Postres",
             "id": "postres"
         },
-        "precio": 1000
+        "precio": 600
     },
     {
         "id": "postre-6",
@@ -260,7 +260,7 @@
             "nombre": "Postres",
             "id": "postres"
         },
-        "precio": 1000
+        "precio": 680
     },
     {
         "id": "postre-7",
@@ -270,7 +270,7 @@
             "nombre": "Postres",
             "id": "postres"
         },
-        "precio": 1000
+        "precio": 500
     },
     {
         "id": "postre-8",
@@ -280,7 +280,7 @@
             "nombre": "Postres",
             "id": "postres"
         },
-        "precio": 1000
+        "precio": 480
     },
     {
         "id": "postre-9",
@@ -290,7 +290,7 @@
             "nombre": "Postres",
             "id": "postres"
         },
-        "precio": 1000
+        "precio": 320
     },
     {
         "id": "postre-10",
@@ -300,6 +300,6 @@
             "nombre": "Postres",
             "id": "postres"
         },
-        "precio": 1000
+        "precio": 450
     }
 ]
