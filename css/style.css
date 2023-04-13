@@ -785,7 +785,7 @@ nav {
 }
 
 .carrito-acciones-comprar {
-    border                    : 0;
+    border                    : 1;
     background-color          : #ffde59e0;
     padding                   : 1rem;
     border-top-right-radius   : 1rem;
@@ -841,18 +841,12 @@ nav {
     color      : black;
 }
 
-.contenedor-form .contact-form input[type="submit"],
+.contenedor-form .contact-form 
 [type="reset"] {
-    width      : 50%;
     font-weight: bold;
     font-family: 'Mulish', sans-serif;
     color      : black;
     cursor     : pointer;
-}
-
-.contenedor-form [type="submit"]:hover,
-[type="reset"]:hover {
-    background: #ebe991;
 }
 
 .contenedor-form .contact-form *::placeholder {
@@ -879,10 +873,6 @@ nav {
 .contenedor-form .contact-form-error.is-active {
     display  : block;
     animation: show-message 1s 1 normal 0s ease-out both;
-}
-
-.contenedor-form .contact-form-loader {
-    text-align: center;
 }
 
 .contenedor-form .none {
@@ -1053,10 +1043,11 @@ footer p {
     font-size : 20px;
 }
 
-footer .powered {
+footer .developed {
     width        : 200px;
     height       : 60px;
     border-radius: 15px;
+    border: 3px solid #ffde59e0;
 }
 
 
