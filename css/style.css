@@ -717,7 +717,6 @@ nav {
     border-radius   : 8px;
 }
 
-
 .carrito-productos {
     display       : flex;
     flex-direction: column;
@@ -733,7 +732,6 @@ nav {
     padding         : .5rem;
     padding-right   : 1.5rem;
     border-radius   : 1rem;
-    margin          : 0 15px;
 }
 
 .carrito-producto-imagen {
@@ -841,8 +839,7 @@ nav {
     color      : black;
 }
 
-.contenedor-form .contact-form 
-[type="reset"] {
+.contenedor-form .contact-form [type="reset"] {
     font-weight: bold;
     font-family: 'Mulish', sans-serif;
     color      : black;
@@ -1047,9 +1044,10 @@ footer .developed {
     width        : 200px;
     height       : 60px;
     border-radius: 15px;
-    border: 3px solid #ffde59e0;
+    border       : 3px solid #ffde59e0;
 }
 
+/*-------------------------------------------------------------*/
 
 /* MEDIA QUERIES */
 @media screen and (max-width:1200px) {
@@ -1115,9 +1113,6 @@ footer .developed {
     }
 
     @media screen and (max-width:990px) {
-        .titulo-logo {
-            margin-left: 20px;
-        }
 
         .titulo-sitio {
             font-size: 35px;
@@ -1216,6 +1211,38 @@ footer .developed {
 
     .container .contact-form .form-box .input-box.w50 {
         width: 100%;
+    }
+
+    .carrito-vacio img {
+        width : 300px;
+        height: 300px;
+    }
+
+    .carrito-acciones{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 18px ;
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    .carrito-vacio p {
+        font-size: 18px;
+    }
+
+    .carrito-vacio a{
+        font-size: 15px;
+    }
+
+    .carrito-producto-imagen {
+        width        : 3rem;
+    }
+    
+    .carrito-producto-small {
+        font-size: 5px
     }
 
 }

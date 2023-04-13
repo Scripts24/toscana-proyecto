@@ -97,11 +97,11 @@ function agregar_al_carrito(e) {
         gravity: "top",
         position: "center",
         style: {
-            background: "#ffde59e0",
+            background: "#F2D95C",
             color: "black",
             marginTop: "70px",
             padding: "20px",
-            fontSize: "25px",
+            fontSize: "22px",
             borderRadius: "8px"
         },
     }).showToast();
