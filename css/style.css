@@ -683,13 +683,10 @@ nav {
 
 /*---CARRITO---*/
 
-.titulo-principal {
-    text-align: center;
-    margin    : 30px 0;
-}
-
 .container-carrito {
     min-height: 100vh;
+    margin    : 30px 0;
+    ;
 }
 
 .contenedor-carrito {
@@ -698,10 +695,29 @@ nav {
     gap           : 1.5rem;
 }
 
-.carrito-vacio,
-.carrito-comprado {
-    color: #ffde59e0;
+.carrito-vacio {
+    color          : #0a0a0a;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    flex-direction : column;
 }
+
+
+
+.carrito-vacio p {
+    font-size  : 25px;
+    font-weight: 700;
+}
+
+.carrito-vacio a {
+    cursor          : pointer;
+    background-color: black;
+    color           : #d7d6d6;
+    padding         : 5px;
+    border-radius   : 8px;
+}
+
 
 .carrito-productos {
     display       : flex;
@@ -711,13 +727,14 @@ nav {
 
 .carrito-producto {
     display         : flex;
-    justify-content : space-between;
+    justify-content : space-around;
     align-items     : center;
     background-color: black;
     color           : #ffde59e0;
     padding         : .5rem;
     padding-right   : 1.5rem;
     border-radius   : 1rem;
+    margin          : 0 15px;
 }
 
 .carrito-producto-imagen {
@@ -785,8 +802,7 @@ nav {
 
 /*---COMPRA---*/
 
-
-.contact-form {
+.contenedor-form .contact-form {
     --form-ok-color   : #365902;
     --form-error-color: #f44336;
     margin-left       : auto;
@@ -794,7 +810,7 @@ nav {
     width             : 80%;
 }
 
-.contact-form>* {
+.contenedor-form .contact-form>* {
     padding      : 16px;
     margin       : 1rem auto;
     display      : block;
@@ -803,16 +819,16 @@ nav {
     border-radius: 10px;
 }
 
-.radio{
-    border       : 1px solid black;
+.contenedor-form .contact-form .radio {
+    border: 1px solid black;
 }
 
-.contact-form-loader img {
+.contenedor-form .contact-form-loader img {
     width : 60px;
     height: 60px;
 }
 
-.contact-form-response {
+.contenedor-form .contact-form-response {
     font-family: 'Mulish', sans-serif;
     font-size  : 24px;
     font-weight: bold;
@@ -820,13 +836,13 @@ nav {
     color      : #FFFFFF;
 }
 
-.contact-form input {
+.contenedor-form .contact-form input {
     font-size  : 16px;
     font-family: 'Mulish', sans-serif;
     color      : black;
 }
 
-.contact-form input[type="submit"],
+.contenedor-form .contact-form input[type="submit"],
 [type="reset"] {
     width      : 50%;
     font-weight: bold;
@@ -835,24 +851,24 @@ nav {
     cursor     : pointer;
 }
 
-[type="submit"]:hover,
+.contenedor-form [type="submit"]:hover,
 [type="reset"]:hover {
     background: #ebe991;
 }
 
-.contact-form *::placeholder {
+.contenedor-form .contact-form *::placeholder {
     color: black;
 }
 
-.contact-form [required]:valid {
+.contenedor-form .contact-form [required]:valid {
     border: solid var(--form-ok-color);
 }
 
-.contact-form [required]:invalid {
+.contenedor-form .contact-form [required]:invalid {
     border: thin solid;
 }
 
-.contact-form-error {
+.contenedor-form .contact-form-error {
     margin-top      : -16px;
     font-size       : 80%;
     background-color: var(--form-error-color);
@@ -861,69 +877,16 @@ nav {
     text-align      : center;
 }
 
-.contact-form-error.is-active {
+.contenedor-form .contact-form-error.is-active {
     display  : block;
     animation: show-message 1s 1 normal 0s ease-out both;
 }
 
-.contact-form-loader {
+.contenedor-form .contact-form-loader {
     text-align: center;
 }
 
-.loading {
-    --speed-of-animation: 0.9s;
-    --gap: 6px;
-    --first-color: #4c86f9;
-    --second-color: #49a84c;
-    --third-color: #f6bb02;
-    --fourth-color: #f6bb02;
-    --fifth-color: #2196f3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    gap: 6px;
-    height: 100px;
-   }
-   
-   .loading span {
-    width: 4px;
-    height: 50px;
-    background: var(--first-color);
-    animation: scale var(--speed-of-animation) ease-in-out infinite;
-   }
-   
-   .loading span:nth-child(2) {
-    background: var(--second-color);
-    animation-delay: -0.8s;
-   }
-   
-   .loading span:nth-child(3) {
-    background: var(--third-color);
-    animation-delay: -0.7s;
-   }
-   
-   .loading span:nth-child(4) {
-    background: var(--fourth-color);
-    animation-delay: -0.6s;
-   }
-   
-   .loading span:nth-child(5) {
-    background: var(--fifth-color);
-    animation-delay: -0.5s;
-   }
-   
-   @keyframes scale {
-    0%, 40%, 100% {
-     transform: scaleY(0.05);
-    }
-   
-    20% {
-     transform: scaleY(1);
-    }
-   }
-
-.none {
+.contenedor-form .none {
     display: none;
 }
 

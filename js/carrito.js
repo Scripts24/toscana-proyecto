@@ -15,9 +15,9 @@ const boton_comprar = document.querySelector("#carrito-acciones-comprar");
 const formulario = document.querySelector(".contact-form")
 
 
-if (productos_en_carrito.length === 0){
+/*if (productos_en_carrito.length === 0){
     formulario.classList.add("disabled")
-}
+}*/
 
 
 /*---Esta función se ejecuta cada vez que se carga la página y cada vez que se elimina un producto---*/
@@ -134,11 +134,12 @@ function vaciar_carrito() {
             productos_en_carrito.length = 0;
             localStorage.setItem("productos-en-carrito", JSON.stringify(productos_en_carrito));
             cargar_productos_carrito();
-        
+          b       
+
             let timerInterval
             Swal.fire({
                 title: 'Vaciando carrito',
-                timer: 4000,
+                timer: 1800,
                 timerProgressBar: true,
                 background: 'black',
                 didOpen: () => {

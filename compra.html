@@ -2,20 +2,18 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toscana</title>
     <!--Favicon-->
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <!--Font-awesome-->
     <script src="https://kit.fontawesome.com/cd2f965cc2.js" crossorigin="anonymous"></script>
     <!-- Íconos Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
-    <!-- Toastify -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- Hoja de estilos -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -28,18 +26,12 @@
         <nav>
             <div class="titulo-logo">
                 <a href="./index.html">
-                    <img src="./img/toscana.png" class="logo" id="top" alt="logo" />
+                    <img src="./img/toscana.png" class="logo" id="top" alt="logo">
                 </a>
                 <h1 class="titulo-sitio">TOSCANA</h1>
             </div>
             <ul class="enlaces-menu">
-                <li>
-                    <a href="./pages/carta.html" class=" boton-volver"><i class="bi bi-arrow-90deg-left"></i>Ver
-                        Carta</a>
-                </li>
-                <li>
-                    <a class=" boton-carrito"><i class="bi bi-cart"></i>Carrito</a>
-                </li>
+                <li class=" boton-carrito">Compra</li>
             </ul>
             <button class="ham" type="button">
                 <span class="br-1"></span>
@@ -50,31 +42,34 @@
     </header>
     <!-- Fin header y nav -->
     <!-- Inicio contenido principal -->
-    <main class="container-carrito">
-        <div class="contenedor-carrito ">
-                <div class="carrito-vacio " id="carrito-vacio"> <img src="/img/cartempty.png" alt="carrito vacío"> <p> Si lo deseas puedes mirar nuestra
-                    <a href="./pages/carta.html">Carta</a></p> 
+    <main>
+        <div class="contenedor-form">
+            <form class="contact-form ">
+                <input name="name" type="text" placeholder="Nombre y apellido"
+                    title="El nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                    required />
+                <input type="number"  name="phone" placeholder="Ej. 2215687733" title="El teléfono solo acepta numeros y espacios" pattern="/^\d{7,14}$/"
+                    required />
+                <input type="email" name="email" placeholder="Escribe tu email" title="Email incorrecto"
+                    pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required />
+                <div class="radio">
+                    <input type="Radio" name="typeBuy" value="Efectivo/Transferencia" checked />
+                    Efectivo/Transferencia
+                    <input type="Radio" name="typeBuy" value="En cuotas" /> En cuotas
+                    <input type="Radio" name="typeBuy" value="Debito" /> Débito
                 </div>
-            <div class="carrito-productos disabled" id="carrito-productos">
-                <!--Se rellena con js-->
-            </div>
-            <div class="carrito-acciones " id="carrito-acciones">
-                <div class="carrito-acciones-izquierda">
-                    <button class="carrito-acciones-vaciar" id="carrito-acciones-vaciar">Vaciar carrito</button>
-                </div>
-                <div class="carrito-acciones-derecha">
-                    <div class="carrito-acciones-total">
-                        <p>Total:</p>
-                        <p id="total">$3000</p>
-                    </div>
-                    <a href="./compra.html" class="carrito-acciones-comprar" id="carrito-acciones-comprar"> Procesar
-                        pedido</a>
-                </div>
-                <p class="carrito-comprado disabled" id="carrito-comprado">Muchas gracias por tu compra <i
-                        class="bi bi-emoji-smile-fill"></i></p>
-            </div>
+                <br />
+                <button class="carrito-acciones-comprar" id="carrito-acciones-comprar">Comprar ahora</button>
+                <button type="reset" value="Reset">RESET</button>
+            </form>
         </div>
+        <p class="carrito-comprado disabled" id="carrito-comprado">Muchas gracias por tu compra <i
+                class="bi bi-emoji-smile-fill"></i></p>
+
+
     </main>
+    <!-- Fin contenido principal -->
+    <!-- Inicio Footer -->
     <footer>
         <div>
             <ul>
@@ -118,24 +113,22 @@
                 </li>
             </ul>
         </div>
-        <p>
-            29 e/ 493 y 494<br />
-            Gonnet - Buenos Aires - Argentina<br />
+        <p>29 e/ 493 y 494<br>
+            Gonnet - Buenos Aires - Argentina<br>
             Todos los derechos reservados &copy;
-            <script>
-                document.write(new Date().getFullYear());
-            </script>
-            - Toscana
+            <script> document.write(new Date().getFullYear());</script> - Toscana
         </p>
-        <img class="powered" src="./img/logocv1.png" alt="logo desarrollo web" />
+        <img class="powered" src="./img/logocv1.png" alt="logo desarrollo web">
     </footer>
     <!-- Fin footer -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./js/carrito.js"></script>
+   
     <script src="./js/scroll.js"></script>
     <script src="./js/navbar.js"></script>
+    <script src="./js/carrito.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/formCompra.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 
 </html>

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function contact_form_validations() {
     const form = document.querySelector(".contact-form"),
         inputs = document.querySelectorAll(".contact-form [required]");
-    
+
     //Mensaje de error 
     inputs.forEach((input) => {
         const span = document.createElement("span");
@@ -41,7 +41,7 @@ function contact_form_validations() {
     //Envío de formulario
     document.addEventListener("submit", (e) => {
         e.preventDefault();
-        
+
         const loader = document.querySelector(".contact-form-loader"),
             response = document.querySelector(".contact-form-response");
 
@@ -55,17 +55,18 @@ function contact_form_validations() {
             body: new FormData(e.target)
         })
             .then(res => res.ok ? res.json() : Promise.reject(res))
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Compra realizada exitosamente, en breve le será enviado su pedido',
+            showConfirmButton: true,
+        })
             .then(json => {
                 console.log(json);
                 loader.classList.add("none");
                 response.classList.remove("none");
                 response.innerHTML = `<p>${json.message}</p>`;
-                Swal.fire({
-                    position:'center',
-                    icon: 'success',
-                    title: 'Compra realizada exitosamente, en breve le será enviado su pedido',
-                    showConfirmButton: true,
-                })
+
                 form.reset();
             })
             .catch(err => {

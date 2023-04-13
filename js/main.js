@@ -87,14 +87,12 @@ if (productos_en_carrito_LS) {
     actualizar_numerito();
 } else {
     productos_en_carrito = []; /*---Sino arranca como un array vacío---*/
-
 }
 
 
 function agregar_al_carrito(e) {
-
     Toastify({
-        text: "Se ha agregado al carrito ✔",
+        text: `Se ha agregado al carrito ✔`,
         duration: 3000,
         gravity: "top",
         position: "center",
@@ -107,18 +105,21 @@ function agregar_al_carrito(e) {
             borderRadius: "8px"
         },
     }).showToast();
+    
     const id_boton = e.currentTarget.id;
     const producto_agregado = productos.find(producto => producto.id === id_boton)
-
+    
 
     /*---Chequear con some si el producto ya fue agregado para que no se duplique---*/
     /*---Si está subimos la cantidad, sino simplemente pusheamos---*/
     if (productos_en_carrito.some(producto => producto.id === id_boton)) {
         const index = productos_en_carrito.findIndex(producto => producto.id === id_boton)/*---Busca el índice de un producto---*/
         productos_en_carrito[index].cantidad++
+        
     } else {
         producto_agregado.cantidad = 1;
         productos_en_carrito.push(producto_agregado);
+        
     }
     actualizar_numerito();
 
@@ -130,5 +131,4 @@ function agregar_al_carrito(e) {
 function actualizar_numerito() {
     let nuevo_numerito = productos_en_carrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevo_numerito;
-
 }
