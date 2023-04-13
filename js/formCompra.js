@@ -38,15 +38,19 @@ function contact_form_validations() {
         }
     });
 
+    const DateTime = luxon.DateTime;
+
+    const now = DateTime.now();
+    const llegada = DateTime.fromObject({ day: now.day + 0 });
+
     //Envío de formulario
     document.addEventListener("submit", (e) => {
+
+        const name = document.querySelector("#nombre").value;
+
         e.preventDefault();
 
-        const loader = document.querySelector(".contact-form-loader"),
-            response = document.querySelector(".contact-form-response");
-
-        //loader.classList.remove("none");
-
+        const response = document.querySelector(".contact-form-response");
 
         // ---FETCH-----
 
@@ -55,29 +59,28 @@ function contact_form_validations() {
             body: new FormData(e.target)
         })
             .then(res => res.ok ? res.json() : Promise.reject(res))
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Compra realizada exitosamente, en breve le será enviado su pedido',
-            showConfirmButton: true,
-        })
             .then(json => {
                 console.log(json);
-                loader.classList.add("none");
                 response.classList.remove("none");
                 response.innerHTML = `<p>${json.message}</p>`;
-
                 form.reset();
             })
-            .catch(err => {
-                console.log(err);
-                let message = err.statusText || "Error al enviar, intenta nuevamente";
-                response.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
-            })
-            .finally(() => setTimeout(() => {
-                response.classList.add("none");
-                response.innerHTML = "";
-            }, 3000));
+        Swal.fire({
+            title: `Gracias por su compra ${name}, en breve le será enviado su pedido`,
+            html: `<span class="sweet-fechas">Fecha actual: ${now.toLocaleString()}</span>
+                    <span class="sweet-fechas pt-2">Te enviamos un correo electronico con el detalle de tu compra.</span>
+                    <span class="sweet-fechas pt-3">Fecha de entrega: ${llegada.toLocaleString()}</span>`,
+            position: 'center',
+            color: "#ffde59e0",
+            icon: 'success',
+            background: "black",
+            showConfirmButton: true,
+            confirmButtonColor: "#ffde59e0"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "../index.html";
+            }
+        });
+        setTimeout(() => (window.location.href = "../index.html"), 10000);
     });
 }
-

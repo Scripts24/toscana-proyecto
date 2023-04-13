@@ -45,11 +45,13 @@
     <main>
         <div class="contenedor-form">
             <form class="contact-form ">
-                <input name="name" type="text" placeholder="Nombre y apellido"
+                <input name="name" id="nombre" value="" type="text" placeholder="Nombre y apellido"
                     title="El nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
                     required />
-                <input type="number"  name="phone" placeholder="Ej. 2215687733" title="El teléfono solo acepta numeros y espacios" pattern="/^\d{7,14}$/"
-                    required />
+                <input name="direction" type="text"  placeholder="Direccion" title="La dirección acepta letras y números"
+                    pattern="^[a-zA-ZÀ-ÿ\s]{1,40}$" required />
+                <input type="number" name="phone" placeholder="Ej. 2215687733"
+                    title="El teléfono solo acepta números" pattern="^\d{7,14}$" required />
                 <input type="email" name="email" placeholder="Escribe tu email" title="Email incorrecto"
                     pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required />
                 <div class="radio">
@@ -63,10 +65,11 @@
                 <button type="reset" value="Reset">RESET</button>
             </form>
         </div>
+        <div class="contact-form-response none">
+            
+        </div>
         <p class="carrito-comprado disabled" id="carrito-comprado">Muchas gracias por tu compra <i
                 class="bi bi-emoji-smile-fill"></i></p>
-
-
     </main>
     <!-- Fin contenido principal -->
     <!-- Inicio Footer -->
@@ -121,14 +124,12 @@
         <img class="powered" src="./img/logocv1.png" alt="logo desarrollo web">
     </footer>
     <!-- Fin footer -->
-   
+    <!-- Luxon -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.1/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/navbar.js"></script>
-    <script src="./js/carrito.js"></script>
-    <script src="./js/main.js"></script>
     <script src="./js/formCompra.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </body>
 
 </html>

@@ -105,21 +105,21 @@ function agregar_al_carrito(e) {
             borderRadius: "8px"
         },
     }).showToast();
-    
+
     const id_boton = e.currentTarget.id;
     const producto_agregado = productos.find(producto => producto.id === id_boton)
-    
+
 
     /*---Chequear con some si el producto ya fue agregado para que no se duplique---*/
     /*---Si está subimos la cantidad, sino simplemente pusheamos---*/
     if (productos_en_carrito.some(producto => producto.id === id_boton)) {
         const index = productos_en_carrito.findIndex(producto => producto.id === id_boton)/*---Busca el índice de un producto---*/
         productos_en_carrito[index].cantidad++
-        
+
     } else {
         producto_agregado.cantidad = 1;
         productos_en_carrito.push(producto_agregado);
-        
+
     }
     actualizar_numerito();
 

@@ -134,12 +134,11 @@ function vaciar_carrito() {
             productos_en_carrito.length = 0;
             localStorage.setItem("productos-en-carrito", JSON.stringify(productos_en_carrito));
             cargar_productos_carrito();
-          b       
 
             let timerInterval
             Swal.fire({
                 title: 'Vaciando carrito',
-                timer: 1800,
+                timer: 1500,
                 timerProgressBar: true,
                 background: 'black',
                 didOpen: () => {
@@ -171,7 +170,7 @@ function actualizar_total() {
 
 boton_comprar.addEventListener("click", comprar_carrito);
 function comprar_carrito() {
-    
+
     productos_en_carrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productos_en_carrito));
 

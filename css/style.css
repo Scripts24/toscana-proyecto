@@ -681,6 +681,7 @@ nav {
     background: black;
 }
 
+
 /*---CARRITO---*/
 
 .container-carrito {
@@ -702,8 +703,6 @@ nav {
     align-items    : center;
     flex-direction : column;
 }
-
-
 
 .carrito-vacio p {
     font-size  : 25px;
