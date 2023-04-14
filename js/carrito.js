@@ -126,7 +126,7 @@ function vaciar_carrito() {
         cancelButtonColor: "red",
         width: 400,
         heightAuto: false,
-        color: 'red',
+        color: '#ffde59e0',
         background: 'black',
     }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
@@ -140,6 +140,7 @@ function vaciar_carrito() {
                 title: 'Vaciando carrito',
                 timer: 1500,
                 timerProgressBar: true,
+                color: '#ffde59e0',
                 background: 'black',
                 didOpen: () => {
                     Swal.showLoading()

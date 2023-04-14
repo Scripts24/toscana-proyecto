@@ -30,7 +30,7 @@ p {
 .progress-bar {
     position: fixed;
     width   : 100%;
-    height  : 8px;
+    height  : 10px;
     top     : 0;
     z-index : 10;
 }
@@ -147,10 +147,55 @@ nav {
     margin-right: 20px;
 }
 
-.boton-carrito {
-    font-size   : 30px;
-    color       : #ffde59e0;
-    padding-left: 8px;
+.menu-cart {
+    margin-right: 250px;
+    gap         : 60px;
+}
+
+.menu-cart i {
+    margin-right: 15px;
+}
+
+.check {
+    margin-right: 500px;
+}
+
+.nav-cart {
+    position: relative;
+    cursor  : pointer;
+}
+
+/*Ïcono carrito*/
+
+.nav-cart-icon {
+    display    : block;
+    color      : #ffde59e0;
+    cursor     : pointer;
+    font-size  : 35px;
+    margin-left: 10px;
+}
+
+.nav-cart-counter {
+    position        : absolute;
+    top             : -35%;
+    left            : 55%;
+    background-color: rgb(138, 137, 137);
+    color           : #ffde59e0;
+    width           : 1.4rem;
+    height          : 1.4rem;
+    border-radius   : 50%;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    opacity         : 0;
+}
+
+.nav-cart-counter-show {
+    opacity: 1;
+}
+
+.nav-cart-counter-text {
+    font-size: 0.8rem;
 }
 
 /* INDEX */
@@ -535,7 +580,6 @@ nav {
     min-width : 1100px;
     min-height: 550px;
     display   : flex;
-
 }
 
 .container .contact-info {
@@ -673,7 +717,6 @@ nav {
     color     : white;
     border    : none;
     padding   : 12px;
-
 }
 
 .container .contact-form .form-box .input-box input[type="submit"]:hover,
@@ -711,10 +754,15 @@ nav {
 
 .carrito-vacio a {
     cursor          : pointer;
-    background-color: black;
-    color           : #d7d6d6;
+    background-color: #ffde59e0;
+    color           : black;
     padding         : 5px;
     border-radius   : 8px;
+}
+
+.carrito-vacio img {
+    width : 500px;
+    height: 500px;
 }
 
 .carrito-productos {
@@ -1076,7 +1124,6 @@ footer .developed {
     }
 }
 
-
 @media screen and (max-width:1000px) {
 
     .titulo-logo img {
@@ -1218,12 +1265,12 @@ footer .developed {
         height: 300px;
     }
 
-    .carrito-acciones{
-        flex-direction: column;
+    .carrito-acciones {
+        flex-direction : column;
         justify-content: center;
-        align-items: center;
-        gap: 18px ;
-        font-size: 18px;
+        align-items    : center;
+        gap            : 18px;
+        font-size      : 18px;
     }
 
 }
@@ -1233,14 +1280,14 @@ footer .developed {
         font-size: 18px;
     }
 
-    .carrito-vacio a{
+    .carrito-vacio a {
         font-size: 15px;
     }
 
     .carrito-producto-imagen {
-        width        : 3rem;
+        width: 3rem;
     }
-    
+
     .carrito-producto-small {
         font-size: 5px
     }

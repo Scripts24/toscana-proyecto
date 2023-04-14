@@ -25,7 +25,7 @@
     </div>
     <!-- Botón fixed subir Js -->
     <div id="top-progress">
-        <span id="progress-value">&#x1F815;</span>
+        <span id="progress-value"><i class="bi bi-arrow-up"></i></span>
     </div>
     <!-- Inicio header y nav -->
     <header>
@@ -35,10 +35,13 @@
                     <img src="../img/toscana.png" class="logo" id="top" alt="logo">
                 </a>
                 <h1 class="titulo-sitio">TOSCANA</h1>
-                <li>
-                    <a href="../carrito.html" class=" boton-carrito"><i class="bi bi-cart"></i><span id="numerito"
-                            class="numerito">0</span></a>
-                </li>
+                <div class="nav-cart">
+                    <div id="numerito" class="numerito nav-cart-counter nav-cart-counter-show">
+                        <h2 class="nav-cart-counter-text">0</h2>
+                    </div>
+                    <a href="../carrito.html"><i class="bi bi-cart nav-cart-icon"></i>
+                    </a>
+                </div>
             </div>
             <ul class="enlaces-menu">
                 <li><a href="../index.html">Inicio</a></li>
