@@ -12,12 +12,6 @@ let botones_eliminar = document.querySelectorAll(".carrito-producto-eliminar");
 const boton_vaciar = document.querySelector("#carrito-acciones-vaciar");
 const contenedor_total = document.querySelector("#total");
 const boton_comprar = document.querySelector("#carrito-acciones-comprar");
-const formulario = document.querySelector(".contact-form")
-
-
-/*if (productos_en_carrito.length === 0){
-    formulario.classList.add("disabled")
-}*/
 
 
 /*---Esta función se ejecuta cada vez que se carga la página y cada vez que se elimina un producto---*/
@@ -58,14 +52,9 @@ function cargar_productos_carrito() {
                         </div>
                         <button class="carrito-producto-eliminar" id="${producto.precio}"><i class="bi bi-trash"></i></button>
                 `
-
             contenedor_carrito_productos.append(div);
-
         });
-
-
     } else {
-
         contenedor_carrito_vacio.classList.remove("disabled");
         contenedor_carrito_productos.classList.add("disabled");
         contenedor_carrito_acciones.classList.add("disabled");
@@ -88,20 +77,28 @@ function actualizar_botones_eliminar() {
 }
 
 function eliminar_del_carrito(e) {
-    Toastify({
-        text: "Producto eliminado 🚫",
-        duration: 3000,
-        gravity: "top",
-        position: "center",
-        style: {
-            background: "#ffde59e0",
-            color: "black",
-            marginTop: "70px",
-            padding: "20px",
-            fontSize: "25px",
-            borderRadius: "8px"
-        },
-    }).showToast();
+    Swal.fire({
+        title: 'Está seguro?',
+        icon: 'warning',
+        background: 'black',
+        color: '#ffde59e0',
+        showCancelButton: true,
+        confirmButtonColor: 'green',
+        cancelButtonColor: 'red',
+        width: 400,
+        confirmButtonText: 'Sí, eliminar!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: 'Producto eliminado ✔',
+                background: '#F2D95C',
+                color: 'black',
+                timer: 2000,
+                showConfirmButton: false
+            })
+        }
+    })
+
     const id_boton = e.currentTarget.id;
     const index = productos_en_carrito.findIndex(producto => producto.id === id_boton);
 
@@ -109,7 +106,6 @@ function eliminar_del_carrito(e) {
     cargar_productos_carrito();
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productos_en_carrito));
-
 }
 
 
@@ -144,10 +140,6 @@ function vaciar_carrito() {
                 background: 'black',
                 didOpen: () => {
                     Swal.showLoading()
-                    const b = Swal.getHtmlContainer().querySelector('b')
-                    timerInterval = setInterval(() => {
-                        b.textContent = Swal.getTimerLeft()
-                    }, 100)
                 },
                 willClose: () => {
                     clearInterval(timerInterval)

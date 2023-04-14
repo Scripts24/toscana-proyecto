@@ -62,13 +62,12 @@ function contact_form_validations() {
             .then(json => {
                 console.log(json);
                 response.classList.remove("none");
-                response.innerHTML = `<p>${json.message}</p>`;
                 form.reset();
             })
         Swal.fire({
             title: `Gracias por su compra ${name}, en breve le será enviado su pedido`,
             html: `<span class="sweet-fechas">Fecha actual: ${now.toLocaleString()}</span>
-                    <span class="sweet-fechas pt-2">Te enviamos un correo electronico con el detalle de tu compra.</span>
+                    <span class="sweet-fechas pt-2">Te enviamos un email con el detalle de tu compra.</span>
                     <span class="sweet-fechas pt-3">Fecha de entrega: ${llegada.toLocaleString()}</span>`,
             position: 'center',
             color: "#ffde59e0",
