@@ -50,10 +50,13 @@ function cargar_productos_carrito() {
                             <small>Subtotal</small>
                             <p>$${producto.precio * producto.cantidad}</p>
                         </div>
-                        <button class="carrito-producto-eliminar" id="${producto.precio}"><i class="bi bi-trash"></i></button>
+                        <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash"></i></button>
                 `
             contenedor_carrito_productos.append(div);
         });
+        actualizar_botones_eliminar();
+        actualizar_total();
+
     } else {
         contenedor_carrito_vacio.classList.remove("disabled");
         contenedor_carrito_productos.classList.add("disabled");
@@ -61,8 +64,6 @@ function cargar_productos_carrito() {
         contenedor_carrito_comprado.classList.add("disabled");
     }
 
-    actualizar_botones_eliminar();
-    actualizar_total();
 }
 
 cargar_productos_carrito();
@@ -77,6 +78,8 @@ function actualizar_botones_eliminar() {
 }
 
 function eliminar_del_carrito(e) {
+    const id_boton = e.currentTarget.id;
+    const index = productos_en_carrito.findIndex(producto => producto.id === id_boton);
     Swal.fire({
         title: 'Está seguro?',
         icon: 'warning',
@@ -96,16 +99,13 @@ function eliminar_del_carrito(e) {
                 timer: 2000,
                 showConfirmButton: false
             })
+
+            productos_en_carrito.splice(index, 1);
+            cargar_productos_carrito();
+
+            localStorage.setItem("productos-en-carrito", JSON.stringify(productos_en_carrito));
         }
     })
-
-    const id_boton = e.currentTarget.id;
-    const index = productos_en_carrito.findIndex(producto => producto.id === id_boton);
-
-    productos_en_carrito.splice(index, 1);
-    cargar_productos_carrito();
-
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productos_en_carrito));
 }
 
 
