@@ -5,7 +5,8 @@ fetch("../products.json")
     .then(data => {
         productos = data;
         cargar_productos(productos);
-    })
+        inicializarZoomImagen(); //ElevateZoom
+    });
 
 const contenedor_productos = document.querySelector("#contenedor-productos");
 const botones_categorias = document.querySelectorAll('.boton-categoria');
@@ -37,6 +38,17 @@ function cargar_productos(productos_elegidos) {
     actualizar_botones_agregar()
 }
 
+/*---Elevate Zoom--- */
+function inicializarZoomImagen() {
+    $('.producto-imagen').elevateZoom({
+        zoomType: "inner",
+        cursor: "crosshair",
+        scrollZoom: true,
+        responsive: true,
+        easing: true,
+    });
+}
+
 /*---Llamado a la función--- */
 cargar_productos(productos);/*---Parámetro para que al cargar por primera vez la página se cargue el array completo--- */
 
@@ -57,9 +69,11 @@ botones_categorias.forEach(boton => {
 
             const productos_boton = productos.filter(producto => producto.categoria.id === e.currentTarget.id)/*---Hacemos un filtro en el array para que solo carguen los productos de la categoría clickeada--- */
             cargar_productos(productos_boton);/*---Parámetro para que carguen solo los productos de la categoría seleccionada--- */
+            inicializarZoomImagen();/*---Llamado a la función zoom al cargar por categoría--- */
         } else {
             titulo_principal.innerText = "Todos los productos";
             cargar_productos(productos);
+            inicializarZoomImagen();/*---Llamado a la función zoom al cargar todo--- */
         }
     })
 });
