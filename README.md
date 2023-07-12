@@ -16,6 +16,7 @@
 <li>Google Fonts</li>
 <li>Adobe Colors</li>
 <li>Luxon</li>
+<li>Elevate zoom</li>
 </ul>
 </p>
 
