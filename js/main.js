@@ -146,3 +146,38 @@ function actualizar_numerito() {
     let nuevo_numerito = productos_en_carrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevo_numerito;
 }
+
+
+//Bloquea la redirección a la página de compra si no hay productos agregados
+
+document.querySelector(".nav-cart-icon").addEventListener("click", (e) => {
+    if (productos_en_carrito.length === 0) {
+        e.preventDefault(); // Evita redirigir a la página de compra
+        
+        Toastify({
+            text: `Tu carrito se encuentra vacío, agrega algún producto`,
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            style: {
+                background: "#F2D95C",
+                color: "black",
+                marginTop: "90px",
+                padding: "20px",
+                fontSize: "22px",
+                borderRadius: "8px"
+            },
+        }).showToast();
+    
+    }
+});
+
+
+
+
+
+
+
+
+
+
