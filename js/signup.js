@@ -8,12 +8,38 @@ signupForm.addEventListener('submit', (e)=>{
     const Users = JSON.parse(localStorage.getItem('users')) || []
     const isUserRegistered = Users.find(user => user.email === email)
     if(isUserRegistered){
-        return alert('El usuario ya esta registrado!')
+        return Toastify({
+            text: `El usuario ya esta registrado!`,
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            style: {
+                background: "#F2D95C",
+                color: "black",
+                marginTop: "150px",
+                padding: "30px",
+                fontSize: "22px",
+                borderRadius: "8px"
+            },
+        }).showToast();
     }
 
     Users.push({name: name, email: email, password: password})
     localStorage.setItem('users', JSON.stringify(Users))
-    alert('Registro Exitoso!')
+    Toastify({
+        text: `Registro Exitoso!`,
+        duration: 3000,
+        gravity: "top",
+        position: "center",
+        style: {
+            background: "#F2D95C",
+            color: "black",
+            marginTop: "150px",
+            padding: "30px",
+            fontSize: "22px",
+            borderRadius: "8px"
+        },
+    }).showToast();
     window.location.href = '../login.html'
 
 })
