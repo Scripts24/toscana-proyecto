@@ -7,7 +7,7 @@ fetch("../products.json")
         cargar_productos(productos);
         inicializarZoomImagen(); //ElevateZoom
     });
-
+    
 const contenedor_productos = document.querySelector("#contenedor-productos");
 const botones_categorias = document.querySelectorAll('.boton-categoria');
 const titulo_principal = document.querySelector('#titulo-principal');
@@ -37,7 +37,7 @@ function cargar_productos(productos_elegidos) {
 
     actualizar_botones_agregar()
 }
-
+    
 /*---Elevate Zoom--- */
 function inicializarZoomImagen() {
     $('.producto-imagen').elevateZoom({
@@ -78,7 +78,7 @@ botones_categorias.forEach(boton => {
     })
 });
 
-
+  
 /*---Función para actualizar los botones---*/
 /*---Llamado a la función dentro de la función cargar_productos--- */
 function actualizar_botones_agregar() {
@@ -88,7 +88,7 @@ function actualizar_botones_agregar() {
         boton.addEventListener("click", agregar_al_carrito) /*---Evento para llamar a la función agregar_al-carrito---*/
     });
 }
-
+    
 
 /*---Si hay productos en carrito entonces el carrito será igual a lo que traiga del Local Storage, sino arranca como un array vacío---*/
 
@@ -103,8 +103,28 @@ if (productos_en_carrito_LS) {
     productos_en_carrito = []; /*---Sino arranca como un array vacío---*/
 }
 
+    
+let usuarioLogueado = false; // Variable que indica si el usuario ha iniciado sesión o no
+
+function iniciarSesion() {
+    usuarioLogueado = true;
+    localStorage.setItem('login_success', JSON.stringify(true));
+}
+
 
 function agregar_al_carrito(e) {
+
+    if (!usuarioHaIniciadoSesion()) {
+    
+    mostrarMensaje("Para comprar, debes iniciar sesión");
+        
+    redirigirALogin();
+        
+       
+    return;
+      }
+
+
     Toastify({
         text: `Se ha agregado al carrito ✔`,
         duration: 3000,
@@ -140,6 +160,35 @@ function agregar_al_carrito(e) {
     localStorage.setItem("productos-en-carrito", JSON.stringify(productos_en_carrito))
 }
 
+function usuarioHaIniciadoSesion() {
+    const user = JSON.parse(localStorage.getItem('login_success'));
+    return user !== null;
+  }
+  
+  function mostrarMensaje(mensaje) {
+    Swal.fire({
+        title: mensaje,
+        position: 'center',
+        color: "#ffde59e0",
+        icon: 'warning',
+        background: "black",
+        showConfirmButton: true,
+        confirmButtonColor: "#ffde59e0"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            redirigirALogin();
+        }
+    });
+   
+};
+
+function redirigirALogin() {
+    setTimeout(() => (window.location.href = "../login.html"), 5000);
+  }
+
+        
+ 
+
 /*---Función para que al agregar un producto al carrito se actualice el número de productos en el mismo---*/
 /*---Esta función se ejecuta cada vez que agregamos un producto al carrito---*/
 function actualizar_numerito() {
@@ -147,7 +196,7 @@ function actualizar_numerito() {
     numerito.innerText = nuevo_numerito;
 }
 
-
+    
 //Bloquea la redirección a la página de compra si no hay productos agregados
 
 document.querySelector(".nav-cart-icon").addEventListener("click", (e) => {
@@ -173,7 +222,7 @@ document.querySelector(".nav-cart-icon").addEventListener("click", (e) => {
 });
 
 
-
+    
 
 
 
