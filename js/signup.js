@@ -40,7 +40,11 @@ signupForm.addEventListener('submit', (e)=>{
             borderRadius: "8px"
         },
     }).showToast();
-    window.location.href = '../login.html'
+    setTimeout(() => (window.location.href = "../login.html"), 5000);
 
 })
+
+
+
+
 

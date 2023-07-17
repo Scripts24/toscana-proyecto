@@ -7,7 +7,7 @@ fetch("../products.json")
         cargar_productos(productos);
         inicializarZoomImagen(); //ElevateZoom
     });
-    
+
 const contenedor_productos = document.querySelector("#contenedor-productos");
 const botones_categorias = document.querySelectorAll('.boton-categoria');
 const titulo_principal = document.querySelector('#titulo-principal');
@@ -37,7 +37,7 @@ function cargar_productos(productos_elegidos) {
 
     actualizar_botones_agregar()
 }
-    
+
 /*---Elevate Zoom--- */
 function inicializarZoomImagen() {
     $('.producto-imagen').elevateZoom({
@@ -78,7 +78,7 @@ botones_categorias.forEach(boton => {
     })
 });
 
-  
+
 /*---Función para actualizar los botones---*/
 /*---Llamado a la función dentro de la función cargar_productos--- */
 function actualizar_botones_agregar() {
@@ -88,7 +88,7 @@ function actualizar_botones_agregar() {
         boton.addEventListener("click", agregar_al_carrito) /*---Evento para llamar a la función agregar_al-carrito---*/
     });
 }
-    
+
 
 /*---Si hay productos en carrito entonces el carrito será igual a lo que traiga del Local Storage, sino arranca como un array vacío---*/
 
@@ -103,7 +103,7 @@ if (productos_en_carrito_LS) {
     productos_en_carrito = []; /*---Sino arranca como un array vacío---*/
 }
 
-    
+
 let usuarioLogueado = false; // Variable que indica si el usuario ha iniciado sesión o no
 
 function iniciarSesion() {
@@ -111,19 +111,16 @@ function iniciarSesion() {
     localStorage.setItem('login_success', JSON.stringify(true));
 }
 
-
 function agregar_al_carrito(e) {
 
     if (!usuarioHaIniciadoSesion()) {
-    
-    mostrarMensaje("Para comprar, debes iniciar sesión");
-        
-    redirigirALogin();
-        
-       
-    return;
-      }
 
+        mostrarMensaje("Para comprar, debes iniciar sesión");
+
+        redirigirALogin();
+
+        return;
+    }
 
     Toastify({
         text: `Se ha agregado al carrito ✔`,
@@ -143,7 +140,6 @@ function agregar_al_carrito(e) {
     const id_boton = e.currentTarget.id;
     const producto_agregado = productos.find(producto => producto.id === id_boton)
 
-
     /*---Chequear con some si el producto ya fue agregado para que no se duplique---*/
     /*---Si está subimos la cantidad, sino simplemente pusheamos---*/
     if (productos_en_carrito.some(producto => producto.id === id_boton)) {
@@ -153,7 +149,6 @@ function agregar_al_carrito(e) {
     } else {
         producto_agregado.cantidad = 1;
         productos_en_carrito.push(producto_agregado);
-
     }
     actualizar_numerito();
 
@@ -163,9 +158,9 @@ function agregar_al_carrito(e) {
 function usuarioHaIniciadoSesion() {
     const user = JSON.parse(localStorage.getItem('login_success'));
     return user !== null;
-  }
-  
-  function mostrarMensaje(mensaje) {
+}
+
+function mostrarMensaje(mensaje) {
     Swal.fire({
         title: mensaje,
         position: 'center',
@@ -179,15 +174,11 @@ function usuarioHaIniciadoSesion() {
             redirigirALogin();
         }
     });
-   
 };
 
 function redirigirALogin() {
     setTimeout(() => (window.location.href = "../login.html"), 5000);
-  }
-
-        
- 
+}
 
 /*---Función para que al agregar un producto al carrito se actualice el número de productos en el mismo---*/
 /*---Esta función se ejecuta cada vez que agregamos un producto al carrito---*/
@@ -196,13 +187,12 @@ function actualizar_numerito() {
     numerito.innerText = nuevo_numerito;
 }
 
-    
 //Bloquea la redirección a la página de compra si no hay productos agregados
 
 document.querySelector(".nav-cart-icon").addEventListener("click", (e) => {
     if (productos_en_carrito.length === 0) {
         e.preventDefault(); // Evita redirigir a la página de compra
-        
+
         Toastify({
             text: `Tu carrito se encuentra vacío, agrega algún producto`,
             duration: 3000,
@@ -217,12 +207,21 @@ document.querySelector(".nav-cart-icon").addEventListener("click", (e) => {
                 borderRadius: "8px"
             },
         }).showToast();
-    
     }
 });
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
 
 
 

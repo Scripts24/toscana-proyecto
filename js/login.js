@@ -37,7 +37,7 @@ loginForm.addEventListener('submit', (e) => {
         },
     }).showToast();
     localStorage.setItem('login_success', JSON.stringify(validUser))
-    window.location.href = '../index.html'
+    setTimeout(() => (window.location.href = "../index.html"), 5000);
 
 })
 
