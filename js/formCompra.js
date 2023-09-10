@@ -1,3 +1,8 @@
+/*---Traer la información del Local storage ---*/
+let productos_en_carrito = localStorage.getItem("productos-en-carrito");
+productos_en_carrito = JSON.parse(productos_en_carrito);
+
+
 document.addEventListener('DOMContentLoaded', () => {
     contact_form_validations()
 })
@@ -63,6 +68,8 @@ function contact_form_validations() {
                 console.log(json);
                 response.classList.remove("none");
                 form.reset();
+                productos_en_carrito.length = 0;
+                localStorage.setItem("productos-en-carrito", JSON.stringify(productos_en_carrito))
             })
         Swal.fire({
             title: `Gracias por su compra ${name}, en breve le será enviado su pedido`,

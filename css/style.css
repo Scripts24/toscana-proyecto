@@ -168,10 +168,6 @@ nav {
     margin-right: 15px;
 }
 
-.check {
-    margin-right: 500px;
-}
-
 .nav-cart {
     position: relative;
     cursor  : pointer;
@@ -902,7 +898,12 @@ nav {
 .contenedor-form .contact-form [type="reset"] {
     font-weight: bold;
     font-family: 'Mulish', sans-serif;
-    color      : black;
+    cursor     : pointer;
+}
+
+#compra-realizada{
+    font-weight: bold;
+    font-family: 'Mulish', sans-serif;
     cursor     : pointer;
 }
 
@@ -947,7 +948,6 @@ nav {
         opacity   : 1;
     }
 }
-
 
 /*---FOOTER---*/
 

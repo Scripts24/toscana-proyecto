@@ -161,14 +161,15 @@ function actualizar_total() {
 }
 
 
-boton_comprar.addEventListener("click", comprar_carrito);
+//boton_comprar.addEventListener("click", comprar_carrito);
 function comprar_carrito() {
 
-    productos_en_carrito.length = 0;
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productos_en_carrito));
+    //productos_en_carrito.length = 0;
+    //localStorage.setItem("productos-en-carrito", JSON.stringify(productos_en_carrito));
 
     contenedor_carrito_vacio.classList.add("disabled");
     contenedor_carrito_productos.classList.add("disabled");
     contenedor_carrito_acciones.classList.add("disabled");
     contenedor_carrito_comprado.classList.remove("disabled");
 }
+
